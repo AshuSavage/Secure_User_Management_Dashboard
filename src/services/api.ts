@@ -9,7 +9,7 @@ export const signIn = async (email: string, password: string): Promise<AxiosResp
     return await API.post('/login', { email, password });
   } catch (error) {
     console.error('Sign In Error:', error);
-    throw error; // Re-throw the error to be handled by the caller
+    throw error; 
   }
 };
 
@@ -18,7 +18,7 @@ export const signUp = async (email: string, password: string): Promise<AxiosResp
     return await API.post('/register', { email, password });
   } catch (error) {
     console.error('Sign Up Error:', error);
-    throw error; // Re-throw the error to be handled by the caller
+    throw error; 
   }
 };
 
@@ -27,6 +27,6 @@ export const fetchUsers = async (page: number = 1): Promise<AxiosResponse> => {
     return await API.get(`/users?page=${page}`);
   } catch (error) {
     console.error('Fetch Users Error:', error);
-    throw error; // Re-throw the error to be handled by the caller
+    throw error; 
   }
 };
